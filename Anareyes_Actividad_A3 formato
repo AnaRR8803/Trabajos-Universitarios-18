@@ -1,0 +1,88 @@
+/******************************************************************************
+Autor: Ana Laura Reyes
+Actividad 3. Programa en C++ que realiza el calculo del RFC de acuerdo con las 
+reglas de SAT
+Fecha: 19/04/2025
+
+*******************************************************************************/
+#include <iostream> //biblioteca estandar para entradas y salidas en C++
+#include <string> //biblioteca para manipulacion de cadenas (std::string)
+
+// funcion para obtener la primera vocal interna del apallido paterno
+char obtenerPrimeraVocalInterna (const std::string& str) {
+    //Recorremos la cadena desde el segundo caracter (indice 1) hasta el final
+    for (size_t i=1; i < str.length(); ++i ) {
+        char c = str[i]; // se obtine el caracter actual de la cadena
+        
+        //se verifica si el carater es una vocal mayuscula
+        if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+            return c; // Regresa la primera vocal interna encontrada
+    }
+    return 'X'; //si no se encuentra ninguna vocal interna, se devuelve una X
+}
+
+// funcion para calcular el RFC con base en los datos personales
+std::string calcularRFC(const std::string& nombre, const std::string& apellidoPaterno, const std::string& apellidoMaterno, const std::string& fechaNacimiento){
+    std::string rfc; //variable para almacenar el RFC resultante
+    
+    // se obtiene la primera letra del apellido paterno
+    char letrainicial = apellidoPaterno[0];
+    
+    // se obtiene la primera vocal interna de apellido paterno
+    char PrimeraVocalInterna = obtenerPrimeraVocalInterna(apellidoPaterno);
+    
+    // se obtiene la inicial del apellido materno, si no existe se usa x
+    char inicialApellidoMaterno = (!apellidoMaterno.empty()) ? apellidoMaterno[0] : 'X';
+    
+    // se obtiene la inicial del nombre
+    char inicialNombre = nombre[0];
+    
+    // se obtine los ultimos dos digitos del año de nacimiento (posicion 2 y 3)
+    std::string anio = fechaNacimiento.substr(2,2);
+    
+    // se obtine el mes de nacimiento (posicion 5 y 6)
+    std::string mes = fechaNacimiento.substr(5,2);
+    
+    // se obtine el dia de nacimiento (posicion 8 y 9)
+    std::string dia = fechaNacimiento.substr(8,2);
+    
+    // se contruye el RFC conectando los valores obtenidos
+    rfc = letrainicial;
+    rfc += PrimeraVocalInterna;
+    rfc += inicialApellidoMaterno;
+    rfc += inicialNombre;
+    rfc += anio;
+    rfc += mes;
+    rfc += dia;
+    
+    return rfc; // se retorna el RFC generado
+
+}
+
+int main(){
+    std::string nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento;
+    
+    // solicita el nombre del usuario
+    std::cout << "Ingrese el nombre: ";
+    std::getline(std::cin, nombre); // captura toda la linea del nombre
+    
+    // solicita el apellido paterno
+    std::cout << "Ingrese el apellido paterno: ";
+    std::getline(std::cin, apellidoPaterno);
+    
+    // solicita el apellido materno, permitiendo que el usuario deje vacio
+    std::cout << "Ingrese el apellido materno (Si no tiene, presione Enter): ";
+    std::getline(std::cin, apellidoMaterno);
+    
+    // solicita la fecha de nacimiento en formato YYYY-MM-DD
+    std::cout << "Ingrese la fecha de nacimiento (YYYY-MM-DD): ";
+    std::getline(std::cin, fechaNacimiento);
+    
+    // se calcula el RFC utilizando la funcion calcularRFC
+    std::string rfc = calcularRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento);
+    
+    // se muestra el RFC generado
+    std::cout << "RFC: " << rfc << std::endl;
+    
+    return 0; // finaliza el Programa
+}
