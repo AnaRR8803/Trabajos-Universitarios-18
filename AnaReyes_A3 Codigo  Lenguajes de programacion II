@@ -1,0 +1,241 @@
+USE [master]
+GO
+/****** Object:  Database [EmpresaUNI]    Script Date: 12/08/2025 12:18:08 a. m. ******/
+CREATE DATABASE [EmpresaUNI]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'EmpresaUNI', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\EmpresaUNI.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'EmpresaUNI_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\EmpresaUNI_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+ALTER DATABASE [EmpresaUNI] SET COMPATIBILITY_LEVEL = 160
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [EmpresaUNI].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [EmpresaUNI] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET AUTO_CLOSE ON 
+GO
+ALTER DATABASE [EmpresaUNI] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [EmpresaUNI] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [EmpresaUNI] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [EmpresaUNI] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [EmpresaUNI] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [EmpresaUNI] SET  MULTI_USER 
+GO
+ALTER DATABASE [EmpresaUNI] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [EmpresaUNI] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [EmpresaUNI] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [EmpresaUNI] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [EmpresaUNI] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [EmpresaUNI] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+ALTER DATABASE [EmpresaUNI] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [EmpresaUNI] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+USE [EmpresaUNI]
+GO
+/****** Object:  Table [dbo].[CentroTrabajo]    Script Date: 12/08/2025 12:18:08 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CentroTrabajo](
+	[No_de_centro] [varchar](10) NOT NULL,
+	[Nombre_del_Centro] [varchar](60) NOT NULL,
+	[Ciudad] [varchar](30) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[No_de_centro] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Directivo]    Script Date: 12/08/2025 12:18:08 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Directivo](
+	[No_Empleado] [varchar](10) NOT NULL,
+	[No_centro_supervisa] [varchar](50) NOT NULL,
+	[Prestaciones] [varchar](30) NOT NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Empleado]    Script Date: 12/08/2025 12:18:08 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Empleado](
+	[No_Empleado] [varchar](10) NOT NULL,
+	[Nombre_de_Empleado] [varchar](30) NOT NULL,
+	[Apellido_Paterno] [varchar](30) NOT NULL,
+	[Apellido_Materno] [varchar](30) NOT NULL,
+	[Fecha_de_Nacimiento] [date] NULL,
+	[RFC] [varchar](20) NULL,
+	[Centro_de_Trabajo] [varchar](20) NOT NULL,
+	[Puesto] [varchar](20) NOT NULL,
+	[Descripcion_del_Puesto] [varchar](30) NOT NULL,
+	[Directivo] [varchar](10) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[No_Empleado] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Puesto]    Script Date: 12/08/2025 12:18:08 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Puesto](
+	[No_de_Puesto] [varchar](10) NOT NULL,
+	[Puesto] [varchar](30) NOT NULL,
+	[Descripcion] [varchar](40) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[No_de_Puesto] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+INSERT [dbo].[CentroTrabajo] ([No_de_centro], [Nombre_del_Centro], [Ciudad]) VALUES (N'000201', N'Tiendas Angel Flores Ropa', N'Culiacan')
+INSERT [dbo].[CentroTrabajo] ([No_de_centro], [Nombre_del_Centro], [Ciudad]) VALUES (N'000202', N'Tiendas Angel Flores Muebles', N'Culiacan')
+INSERT [dbo].[CentroTrabajo] ([No_de_centro], [Nombre_del_Centro], [Ciudad]) VALUES (N'000203', N'Tiendas Angel Flores Cajas', N'Culiacan')
+INSERT [dbo].[CentroTrabajo] ([No_de_centro], [Nombre_del_Centro], [Ciudad]) VALUES (N'049001', N'La Primavera Ropa', N'Culiacan')
+INSERT [dbo].[CentroTrabajo] ([No_de_centro], [Nombre_del_Centro], [Ciudad]) VALUES (N'049002', N'La Primavera Muebles', N'Culiacan')
+INSERT [dbo].[CentroTrabajo] ([No_de_centro], [Nombre_del_Centro], [Ciudad]) VALUES (N'049003', N'La Primavera Cajas', N'Culiacan')
+GO
+INSERT [dbo].[Directivo] ([No_Empleado], [No_centro_supervisa], [Prestaciones]) VALUES (N'5', N'000203', N'1')
+INSERT [dbo].[Directivo] ([No_Empleado], [No_centro_supervisa], [Prestaciones]) VALUES (N'3', N'000202', N'1')
+INSERT [dbo].[Directivo] ([No_Empleado], [No_centro_supervisa], [Prestaciones]) VALUES (N'1', N'049001', N'1')
+GO
+INSERT [dbo].[Empleado] ([No_Empleado], [Nombre_de_Empleado], [Apellido_Paterno], [Apellido_Materno], [Fecha_de_Nacimiento], [RFC], [Centro_de_Trabajo], [Puesto], [Descripcion_del_Puesto], [Directivo]) VALUES (N'1', N'Angel', N'Montes', N'Reyes', CAST(N'1983-06-30' AS Date), N'MORA830630XXX', N'049001', N'2', N'Gerente Gral', N'1')
+INSERT [dbo].[Empleado] ([No_Empleado], [Nombre_de_Empleado], [Apellido_Paterno], [Apellido_Materno], [Fecha_de_Nacimiento], [RFC], [Centro_de_Trabajo], [Puesto], [Descripcion_del_Puesto], [Directivo]) VALUES (N'2', N'Carlos', N'Hernandez', N'Lopez', CAST(N'2003-12-11' AS Date), N'HELC031211XXX', N'049002', N'4', N'Auxiliar Piso', N'0')
+INSERT [dbo].[Empleado] ([No_Empleado], [Nombre_de_Empleado], [Apellido_Paterno], [Apellido_Materno], [Fecha_de_Nacimiento], [RFC], [Centro_de_Trabajo], [Puesto], [Descripcion_del_Puesto], [Directivo]) VALUES (N'3', N'Juan', N'Perez', N'Perez', CAST(N'1993-10-03' AS Date), N'PEPJ931003XXX', N'000202', N'5', N'Gerente Suplente', N'1')
+INSERT [dbo].[Empleado] ([No_Empleado], [Nombre_de_Empleado], [Apellido_Paterno], [Apellido_Materno], [Fecha_de_Nacimiento], [RFC], [Centro_de_Trabajo], [Puesto], [Descripcion_del_Puesto], [Directivo]) VALUES (N'4', N'Daniel', N'Diaz', N'Rossell', CAST(N'2000-11-03' AS Date), N'DIRD001103XXX', N'049003', N'3', N'Cajero Pricipal', N'0')
+INSERT [dbo].[Empleado] ([No_Empleado], [Nombre_de_Empleado], [Apellido_Paterno], [Apellido_Materno], [Fecha_de_Nacimiento], [RFC], [Centro_de_Trabajo], [Puesto], [Descripcion_del_Puesto], [Directivo]) VALUES (N'5', N'Jose', N'Lopez', N'Perez', CAST(N'1980-01-01' AS Date), N'LOPJ800101XXX', N'000203', N'2', N'Gerente Gral', N'1')
+INSERT [dbo].[Empleado] ([No_Empleado], [Nombre_de_Empleado], [Apellido_Paterno], [Apellido_Materno], [Fecha_de_Nacimiento], [RFC], [Centro_de_Trabajo], [Puesto], [Descripcion_del_Puesto], [Directivo]) VALUES (N'6', N'Jesus', N'Vega', N'Castro', CAST(N'1988-03-26' AS Date), N'VECJ880326XXX', N'000201', N'1', N'Vendedor Piso', N'0')
+GO
+INSERT [dbo].[Puesto] ([No_de_Puesto], [Puesto], [Descripcion]) VALUES (N'1', N'Vendedor', N'Vendedor Piso')
+INSERT [dbo].[Puesto] ([No_de_Puesto], [Puesto], [Descripcion]) VALUES (N'2', N'Gerente', N'Gerente Gral')
+INSERT [dbo].[Puesto] ([No_de_Puesto], [Puesto], [Descripcion]) VALUES (N'3', N'Cajero', N'Cajero Pricipal')
+INSERT [dbo].[Puesto] ([No_de_Puesto], [Puesto], [Descripcion]) VALUES (N'4', N'Auxiliar', N'Auxiliar Piso')
+INSERT [dbo].[Puesto] ([No_de_Puesto], [Puesto], [Descripcion]) VALUES (N'5', N'Gerente', N'Gerente Suplente')
+GO
+USE [master]
+GO
+ALTER DATABASE [EmpresaUNI] SET  READ_WRITE 
+GO
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace EmpresaUNI
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void centroTrabajoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.centroTrabajoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.empresaUNIDataSet);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'empresaUNIDataSet.Puesto' Puede moverla o quitarla según sea necesario.
+            this.puestoTableAdapter.Fill(this.empresaUNIDataSet.Puesto);
+            // TODO: esta línea de código carga datos en la tabla 'empresaUNIDataSet.Empleado' Puede moverla o quitarla según sea necesario.
+            this.empleadoTableAdapter.Fill(this.empresaUNIDataSet.Empleado);
+            // TODO: esta línea de código carga datos en la tabla 'empresaUNIDataSet.Directivo' Puede moverla o quitarla según sea necesario.
+            this.directivoTableAdapter.Fill(this.empresaUNIDataSet.Directivo);
+            // TODO: esta línea de código carga datos en la tabla 'empresaUNIDataSet.CentroTrabajo' Puede moverla o quitarla según sea necesario.
+            this.centroTrabajoTableAdapter.Fill(this.empresaUNIDataSet.CentroTrabajo);
+
+        }
+
+        private void centroTrabajoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void directivoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void empleadoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+
