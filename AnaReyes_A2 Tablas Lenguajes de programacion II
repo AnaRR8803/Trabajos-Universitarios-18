@@ -1,0 +1,34 @@
+CREATE DATABASE EmpresaUNI
+
+USE EmpresaUNI
+
+CREATE TABLE Empleado(
+No_Empleado varchar(10) primary key,
+Nombre_de_Empleado varchar(30) not null,
+Apellido_Paterno varchar(30) not null,
+Apellido_Materno varchar(30) not null,
+Fecha_de_Nacimiento date,
+RFC varchar(20),
+Centro_de_Trabajo varchar(20) not null,
+Puesto varchar(20) not null,
+Descripcion_del_Puesto varchar(30) not null,
+Directivo varchar(10) not null
+);
+
+CREATE TABLE Directivo(
+No_Empleado varchar(10) not null,
+No_centro_supervisa varchar(50) not null,
+Prestaciones varchar(30) not null
+);
+
+CREATE TABLE CentroTrabajo(
+No_de_centro varchar(10) primary key not null,
+Nombre_del_Centro varchar(60) not null,
+Ciudad varchar(30) not null
+);
+
+CREATE TABLE Puesto(
+No_de_Puesto varchar(10) primary key,
+Puesto varchar(30) not null,
+Descripcion varchar(40) not null
+);
