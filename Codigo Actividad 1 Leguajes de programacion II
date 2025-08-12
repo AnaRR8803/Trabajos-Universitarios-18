@@ -1,0 +1,95 @@
+CREATE DATABASE EmpresaUNI
+
+USE EmpresaUNI
+
+CREATE TABLE Empleado(
+No_Empleado varchar(10) primary key,
+Nombre_de_Empleado varchar(30) not null,
+Apellido_Paterno varchar(30) not null,
+Apellido_Materno varchar(30) not null,
+Fecha_de_Nacimiento date,
+RFC varchar(20),
+Centro_de_Trabajo varchar(20) not null,
+Puesto varchar(20) not null,
+Descripcion_del_Puesto varchar(30) not null,
+Directivo varchar(10) not null
+);
+
+CREATE TABLE Directivo(
+No_Empleado varchar(10) not null,
+No_centro_supervisa varchar(50) not null,
+Prestaciones varchar(30) not null
+);
+
+CREATE TABLE CentroTrabajo(
+No_de_centro varchar(10) primary key not null,
+Nombre_del_Centro varchar(60) not null,
+Ciudad varchar(30) not null
+);
+
+CREATE TABLE Puesto(
+No_de_Puesto varchar(10) primary key,
+Puesto varchar(30) not null,
+Descripcion varchar(40) not null
+);
+use EmpresaUNI
+
+INSERT INTO Empleado ([No_Empleado],[Nombre_de_Empleado],[Apellido_Paterno],[Apellido_Materno],[Fecha_de_Nacimiento],[RFC],[Centro_de_Trabajo],[Puesto],[Descripcion_del_Puesto],[Directivo])
+  VALUES(06,'Jesus','Vega','Castro','03/26/1988','VECJ880326XXX','000201','1','Vendedor Piso','0')
+
+INSERT INTO Empleado ([No_Empleado],[Nombre_de_Empleado],[Apellido_Paterno],[Apellido_Materno],[Fecha_de_Nacimiento],[RFC],[Centro_de_Trabajo],[Puesto],[Descripcion_del_Puesto],[Directivo])
+  VALUES(05,'Jose','Lopez','Perez','01/01/1980','LOPJ800101XXX','000203','2','Gerente Gral','1')
+
+INSERT INTO Empleado ([No_Empleado],[Nombre_de_Empleado],[Apellido_Paterno],[Apellido_Materno],[Fecha_de_Nacimiento],[RFC],[Centro_de_Trabajo],[Puesto],[Descripcion_del_Puesto],[Directivo])
+  VALUES(04,'Daniel','Diaz','Rossell','11/03/2000','DIRD001103XXX','049003','3','Cajero Pricipal','0')
+
+INSERT INTO Empleado ([No_Empleado],[Nombre_de_Empleado],[Apellido_Paterno],[Apellido_Materno],[Fecha_de_Nacimiento],[RFC],[Centro_de_Trabajo],[Puesto],[Descripcion_del_Puesto],[Directivo])
+  VALUES(03,'Juan','Perez','Perez','10/03/1993','PEPJ931003XXX','000202','5','Gerente Suplente','1')
+
+INSERT INTO Empleado ([No_Empleado],[Nombre_de_Empleado],[Apellido_Paterno],[Apellido_Materno],[Fecha_de_Nacimiento],[RFC],[Centro_de_Trabajo],[Puesto],[Descripcion_del_Puesto],[Directivo])
+  VALUES(02,'Carlos','Hernandez','Lopez','12/11/2003','HELC031211XXX','049002','4','Auxiliar Piso','0')
+
+INSERT INTO Empleado ([No_Empleado],[Nombre_de_Empleado],[Apellido_Paterno],[Apellido_Materno],[Fecha_de_Nacimiento],[RFC],[Centro_de_Trabajo],[Puesto],[Descripcion_del_Puesto],[Directivo])
+  VALUES(01,'Angel','Montes','Reyes','06/30/1983','MORA830630XXX','049001','2','Gerente Gral','1')
+
+INSERT INTO Directivo ([No_Empleado],[No_centro_supervisa],[Prestaciones])
+  VALUES(05,'000203','1')
+
+INSERT INTO Directivo ([No_Empleado],[No_centro_supervisa],[Prestaciones])
+  VALUES(03,'000202','1')
+
+INSERT INTO Directivo ([No_Empleado],[No_centro_supervisa],[Prestaciones])
+  VALUES(01,'049001','1')
+
+INSERT INTO CentroTrabajo ([No_de_centro],[Nombre_del_Centro],[Ciudad])
+  VALUES('000201','Tiendas Angel Flores Ropa','Culiacan')
+
+INSERT INTO CentroTrabajo ([No_de_centro],[Nombre_del_Centro],[Ciudad])
+  VALUES('000202','Tiendas Angel Flores Muebles','Culiacan')
+
+INSERT INTO CentroTrabajo ([No_de_centro],[Nombre_del_Centro],[Ciudad])
+  VALUES('000203','Tiendas Angel Flores Cajas','Culiacan')
+
+INSERT INTO CentroTrabajo ([No_de_centro],[Nombre_del_Centro],[Ciudad])
+  VALUES('049001','La Primavera Ropa','Culiacan')
+
+INSERT INTO CentroTrabajo ([No_de_centro],[Nombre_del_Centro],[Ciudad])
+  VALUES('049002','La Primavera Muebles','Culiacan')
+
+INSERT INTO CentroTrabajo ([No_de_centro],[Nombre_del_Centro],[Ciudad])
+  VALUES('049003','La Primavera Cajas','Culiacan')
+
+INSERT INTO Puesto ([No_de_Puesto],[Puesto],[Descripcion])
+  VALUES(1,'Vendedor','Vendedor Piso')
+
+INSERT INTO Puesto ([No_de_Puesto],[Puesto],[Descripcion])
+  VALUES(2,'Gerente','Gerente Gral')
+
+INSERT INTO Puesto ([No_de_Puesto],[Puesto],[Descripcion])
+  VALUES(3,'Cajero','Cajero Pricipal')
+
+INSERT INTO Puesto ([No_de_Puesto],[Puesto],[Descripcion])
+  VALUES(4,'Auxiliar','Auxiliar Piso')
+
+INSERT INTO Puesto ([No_de_Puesto],[Puesto],[Descripcion])
+  VALUES(5,'Gerente','Gerente Suplente')
