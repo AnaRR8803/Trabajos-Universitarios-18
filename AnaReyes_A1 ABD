@@ -1,0 +1,96 @@
+use AkirasBoutiques
+
+CREATE TABLE Empleados (
+Id_Empleado varchar (10) primary key,
+Nombre varchar (50) not null,
+Apellidos varchar (50) not null,
+Direccion varchar (80) not null,
+Numero_de_telefono varchar (10) not null,
+Edad varchar (10) not null,
+Nombre_de_la_sucursal varchar (80)  not null,
+Correo_electronico varchar (50) not null,
+Contraseña varchar (20) not null
+)
+Select *from Empleados
+
+DROP TABLE Empleados
+
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (0, N'Sonia Alejandra', N'Fernandez Moreno', N'Calle Tulipan #601 Fracc. Las Mercedes', 4443689452, 40, N'Akira’s Boutique: Las Mercedes', N'soniaalejandrafm@gmail.com', 96545685)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (1, N'Maria', N'Quijano Cortez', N'Calle Playa Mansa #202 Fracc Monterreal', 4449658474, 25, N'Akira’s Boutique: Las Mercedes', N'mariaqc@gmail.com', 96254586)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (2, N'Noyolcy', N'Gutierrez Huerta', N'Calle Geranio #306 Fracc Las Mercedes', 4443874123, 32, N'Akira’s Boutique: Las Mercedes', N'noyolcygh@gmail.com', 96753461)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (3, N'Cesar', N'Estrada Angeles', N'Calle Mercedarias #402 Fracc Monterreal', 4442598412, 28, N'Akira’s Boutique: Las Mercedes', N'cesarea@gmail.com', 96755842)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (4, N'Juan', N'Porras Rios', N'Calle Alheli #304 Fracc Las Mercedes', 4446978521, 22, N'Akira’s Boutique: Las Mercedes', N'juanpr@gmail.com', 96872531)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (5, N'Amelia', N'Guerrero Acosta', N'Calle Cto del Rayo #124 Fracc Monterreal', 4446598745, 37, N'Akira’s Boutique: Las Mercedes', N'ameliaga@gmail.com', 96875421)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (6, N'Fernando', N'Calderón Ayala', N'Calle Pimentel #438 Col. Obraje', 4496524891, 36, N'Akira’s Boutique: Obraje', N'fernandoca@gmail.com', 90758421)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (7, N'Yolanda', N'Ceron Mota', N'Calle Galeana Sur #506 Col. Obraje', 4496598741, 44, N'Akira’s Boutique: Obraje', N'yolandacm@gmail.com', 90357684)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (8, N'Ivan', N'Arteaga Calderon', N'Calle Epifiano de silva #607 Col. Obraje', 4493695784, 27, N'Akira’s Boutique: Obraje', N'ivanac@gmail.com', 90253641)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (9, N'Sergio', N'Migueles Trejo', N'Calle Brasilia #225 Col. Obraje', 4496589412, 33, N'Akira’s Boutique: Obraje', N'sergiomt@gmail.com', 90458674)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (10, N'Sara', N'Barrera Rios', N'Calle Jose Armando #401 Col. Obraje', 4493269741, 24, N'Akira’s Boutique: Obraje', N'sarabr@gmail.com', 90258694)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (11, N'Esteban', N'Ortiz Benitez', N'Calle Alba #704 Col. Obraje', 4493256914, 30, N'Akira’s Boutique: Obraje', N'estebanob@gmail.com', 90527898)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (12, N'Daniela Fernanda', N'Díaz Ordaz', N'Calle Veracruz #471, Alameda', 6693698774, 39, N'Akira’s Boutique: Galerías Mazatlán', N'danielafernandado@gmail.com', 94857685)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (13, N'Soledad', N'Castro Ruiz', N'Calle Sonora #822, Sanchez Celis', 6697854123, 26, N'Akira’s Boutique: Galerías Mazatlán', N'soledadcr@gmail.com', 94789812)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (14, N'Margarita', N'Angeles Gutierrez', N'Calle Durango #813, Sanchez Celis', 6695215891, 35, N'Akira’s Boutique: Galerías Mazatlán', N'margaritaag@gmail.com', 94768531)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (15, N'Ernesto', N'Reyes Oregon', N'Calle Cedro #319, Alameda', 6697896329, 38, N'Akira’s Boutique: Galerías Mazatlán', N'ernestoro@gmail.com', 94698532)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (16, N'Jose', N'Zapata Percastegui', N'Av Revolucion #320, Lopez Mateos', 6695624872, 21, N'Akira’s Boutique: Galerías Mazatlán', N'josezp@gmail.com', 94863215)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (17, N'Manuel', N'Saldiva Acosta', N'Calle Campeche #901, Sanchez Celis', 6696254843, 44, N'Akira’s Boutique: Galerías Mazatlán', N'manuelsa@gmail.com', 94857621)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (18, N'Mario Alberto', N'Jiménez Salcido', N'Calle al Cantil #138 Prados Vallarta', 3336524568, 31, N'Akira’s Boutique: Zapopan', N'marioalbertojs@gmail.com', 97856321)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (19, N'Adriana', N'Linares Mendez', N'Calle Joseph Hayden #4942 Prados Guadalupe', 3336287451, 26, N'Akira’s Boutique: Zapopan', N'adrianalm@gmail.com', 97258545)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (20, N'Pablo', N'Hernandez Ortiz', N'Calle A la Praderas#212 Prados Vallarta', 3335842639, 20, N'Akira’s Boutique: Zapopan', N'pabloho@gmail.com', 97364152)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (21, N'Kevin', N'Sanchez Angeles', N'Calle Abogados #153 Lomas Guadalupe', 3339647528, 36, N'Akira’s Boutique: Zapopan', N'kevinsa@gmail.com', 97864835)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (22, N'Arturo', N'Mota Gutierrez', N'Calle Estudiantes#4524 Jardines Guadalupe', 3337821463, 41, N'Akira’s Boutique: Zapopan', N'arturomg@gmail.com', 97654523)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (23, N'Humberto', N'Estrada Quiroz', N'Calle Tecnicos #4739 Jardines Guadalupe', 3335476215, 22, N'Akira’s Boutique: Zapopan', N'humbertoeq@gmail.com', 97153595)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (24, N'Yesenia Guadalupe', N'Campos Rojo', N'Calle Francisco Xavier Mina #1607 Zona Centro II', 6148475623, 37, N'Akira´s Boutique: Melchor', N'yeseniaguadalupecr@gmail.com', 95356412)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (25, N'Laura', N'Arteaga Cedillo', N'Calle Ignacio Ramirez #1604 Zona Centro II', 6148527892, 29, N'Akira´s Boutique: Melchor', N'lauraac@gmail.com', 95863575)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (26, N'Abril', N'Huerta Montes', N'Blvrd Gustavo Diaz Ordaz #1805 Zona Centro', 6147895214, 45, N'Akira´s Boutique: Melchor', N'abrilhm@gmail.com', 95456525)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (27, N'Karina', N'Castillo Ceron', N'Calle Batallon de San Patricio #2203 Santa Rita', 6147531593, 30, N'Akira´s Boutique: Melchor', N'karinacc@gmail.com', 95251232)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (28, N'Carlos', N'Olguin Cervantes', N'Calle De la llave #2203 Santa Rita', 6143217895, 28, N'Akira´s Boutique: Melchor', N'carlosoc@gmail.com', 95874565)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (29, N'Concepcion', N'Cerdan Monroy', N'Calle De Jose Ma. Morelos y Pavon #1814 Cuauhtemoc', 6147591538, 33, N'Akira´s Boutique: Melchor', N'concepcioncm@gmail.com', 95867485)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (30, N'Tamara Alejandra', N'Bernal Ramos', N'Calle Francisco I. Madero #112 Zona Centro', 6188429539, 46, N'Akira’s Boutique: Constitución', N'tamaraalejandrabr@gmail.com', 91364574)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (31, N'Miguel', N'Flores Aquino', N'Calle Victoria Nte #110 Zona Centro', 6187549567, 27, N'Akira’s Boutique: Constitución', N'miguelfa@gmail.com', 91654525)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (32, N'Jazmin', N'Jimenez Alarcon', N'Calle Pasteur #121 Zona Centro', 6188523675, 35, N'Akira’s Boutique: Constitución', N'jazminja@gmail.com', 91652531)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (33, N'Anayeli', N'Alvarez Nieto', N'Calle Negrete #304 Zona Centro', 6185978239, 24, N'Akira’s Boutique: Constitución', N'anayelian@gmail.com', 91758645)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (34, N'Andres', N'Monico Ledezma', N'Calle Patoni #310 Zona Centro', 6188346952, 39, N'Akira’s Boutique: Constitución', N'andresml@gmail.com', 91864525)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (35, N'Fausta', N'Diaz Mina', N'Calle Aquiles Serdan #156 Zona Centro', 6187892548, 42, N'Akira’s Boutique: Constitución', N'faustadm@gmail.com', 91362545)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (36, N'Samuel Enrique', N'Barrios Enciso', N'Calle Genaro Codina #607 Zacatecas Centro', 4927512634, 26, N'Akira’s Boutique: Centro', N'samuelenriquebe@gmail.com', 98853645)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (37, N'Gabino', N'Portillo Guerra', N'Calle Fernando Villalpando #316 Zacatecas Centro', 4928756851, 31, N'Akira’s Boutique: Centro', N'gabinopg@gmail.com', 98756525)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (38, N'Julio', N'Melendez Bartolo', N'Calle Del grillo #413 Zacatecas Centro', 4925258743, 29, N'Akira’s Boutique: Centro', N'juliomb@gmail.com', 98456512)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (39, N'Luis', N'Juarez Sanchez', N'Calle Ledezma #219 Zacatecas Centro', 4921257458, 39, N'Akira’s Boutique: Centro', N'luisjs@gmail.com', 98749685)
+INSERT [dbo].[Empleados] ([Id_Empleado], [Nombre], [Apellidos], [Direccion], [Numero_de_telefono], [Edad], [Nombre_de_la_sucursal], [Correo_electronico], [Contraseña]) VALUES (40, N'Alberto', N'Barcenas Huitron', N'Calle Donato Guerra #203 Zacatecas Centro', 4927856846, 45, N'Akira’s Boutique: Centro', N'albertobh@gmail.com', 98253645)
+
+Select Nombre, Apellidos, Nombre_de_la_sucursal From Empleados
+
+Select Nombre, Apellidos, Correo_electronico From Empleados
+
+Select Nombre, Apellidos, Contraseña From Empleados
+
+use AkirasBoutiques
+
+CREATE TABLE Sucursales (
+Id_Sucursal varchar (10) primary key,
+Numero_de_sucursal varchar (10) not null,
+Nombre_de_la_sucursal varchar (50) not null,
+Nombre_del_encargado varchar (30) not null,
+Apellidos varchar (80) not null,
+Direccion varchar (80) not null,
+Numero_de_telefono varchar (10) not null,
+Ciudad varchar (20) not null,
+Estado varchar (20) not null
+)
+
+Select *from Sucursales
+
+DROP TABLE Sucursales
+
+INSERT [dbo].[Sucursales] ([Id_Sucursal], [Numero_de_sucursal], [Nombre_de_la_sucursal], [Nombre_del_encargado], [Apellidos], [Direccion], [Numero_de_telefono], [Ciudad], [Estado]) VALUES (0, 1, N'Akira’s Boutique: Las Mercedes', N'Sonia Alejandra', N'Fernández Moreno', N'Calle Roble #507 Fracc. Las Mercedes', 4447831225, N'San Luis Potosí', N'San Luis Potosí')
+INSERT [dbo].[Sucursales] ([Id_Sucursal], [Numero_de_sucursal], [Nombre_de_la_sucursal], [Nombre_del_encargado], [Apellidos], [Direccion], [Numero_de_telefono], [Ciudad], [Estado]) VALUES (1, 2, N'Akira’s Boutique: Obraje', N'Fernando', N'Calderón Ayala', N'Calle Dr. Jesús Díaz de León #438 col. Obraje', 4493780921, N'Aguascalientes', N'Aguascalientes')
+INSERT [dbo].[Sucursales] ([Id_Sucursal], [Numero_de_sucursal], [Nombre_de_la_sucursal], [Nombre_del_encargado], [Apellidos], [Direccion], [Numero_de_telefono], [Ciudad], [Estado]) VALUES (2, 3, N'Akira’s Boutique: Galerías Mazatlán', N'Daniela Fernanda', N'Díaz Ordaz', N'Av. de la Marina #6204, Marina, local 35', 6692932059, N'Mazatlán', N'Sinaloa')
+INSERT [dbo].[Sucursales] ([Id_Sucursal], [Numero_de_sucursal], [Nombre_de_la_sucursal], [Nombre_del_encargado], [Apellidos], [Direccion], [Numero_de_telefono], [Ciudad], [Estado]) VALUES (3, 4, N'Akira’s Boutique: Zapopan', N'Mario Alberto', N'Jiménez Salcido', N'Av. Manuel J. Clouthier 525 col. Benito Juárez', 3337841230, N'Zapopan', N'Jalisco')
+INSERT [dbo].[Sucursales] ([Id_Sucursal], [Numero_de_sucursal], [Nombre_de_la_sucursal], [Nombre_del_encargado], [Apellidos], [Direccion], [Numero_de_telefono], [Ciudad], [Estado]) VALUES (4, 5, N'Akira´s Boutique: Melchor', N'Yesenia Guadalupe', N'Campos Rojo', N'Av. Melchor Ocampo #2528 Zona Centro', 6143906721, N'Chihuahua', N'Chihuahua')
+INSERT [dbo].[Sucursales] ([Id_Sucursal], [Numero_de_sucursal], [Nombre_de_la_sucursal], [Nombre_del_encargado], [Apellidos], [Direccion], [Numero_de_telefono], [Ciudad], [Estado]) VALUES (5, 6, N'Akira’s Boutique: Constitución', N'Tamara Alejandra', N'Bernal Ramos', N'Calle Constitución #106 Zona Centro', 6181962954, N'Durango', N'Durango')
+INSERT [dbo].[Sucursales] ([Id_Sucursal], [Numero_de_sucursal], [Nombre_de_la_sucursal], [Nombre_del_encargado], [Apellidos], [Direccion], [Numero_de_telefono], [Ciudad], [Estado]) VALUES (6, 7, N'Akira’s Boutique: Centro', N'Samuel Enrique', N'Barrios Enciso', N'Av. Hidalgo #338 Zacatecas Centro', 4929301250, N'Zacatecas', N'Zacatecas')
+
+Select Nombre_de_la_sucursal From Sucursales
+
+Select Nombre_de_la_sucursal, Direccion From Sucursales
+
+Select Nombre_de_la_sucursal, Ciudad, Estado From Sucursales
