@@ -1,0 +1,60 @@
+/****** La cantidad de clientes en el año 2021 ******/
+
+select c.id_cliente, c.nombre, c.apellido from cliente c
+join factura f on c.id_cliente = f.id_cliente where YEAR(f.fecha) = 2021;
+
+select distinct cast(c.nombre as nvarchar(100)) as nombre_cliente from cliente c
+join factura f on c.id_cliente = f.id_cliente where YEAR(f.fecha) = 2021;
+
+/****** La cantidad de clientes en lo que va del año 2022 ******/
+
+select distinct cast(c.nombre as nvarchar(100)) as nombre_cliente from cliente c
+join factura f on c.id_cliente = f.id_cliente where YEAR(f.fecha) = 2022;
+
+/****** Los clientes que tuvieron en diciembre de 2021 ******/
+
+select distinct cast(c.nombre as nvarchar(100)) as nombre_cliente from cliente c
+join factura f on c.id_cliente = f.id_cliente where YEAR(f.fecha) = 2021 and MONTH(f.fecha) = 12
+
+/****** ¿Qué compras han realizado algunos clientes en específico? ******/
+
+select CAST(CAST(c.nombre as nvarchar(100)) +' '+ CAST(c.apellido as nvarchar(100)) as nvarchar(200)) as nombre_completo, f.id_factura, f.fecha from cliente c
+join factura f on c.id_cliente = f.id_cliente
+
+where CAST(CAST(c.nombre as nvarchar(100)) +' '+ CAST(c.apellido as nvarchar(100)) as nvarchar(200)) in
+('Valentina Anastasia Huerta Corral', 'Zayra Manuela Gómez López', 'Dante Eduardo Dolores Meza', 'Ana Maribel Cedillo Núñez', 'Rodrigo Ismael Silva Ugarte') order by f.fecha asc;
+
+/****** ¿Qué producto es el que más ventas ha tenido? ******/
+
+select top 1 CAST(p.nombre as nvarchar(100)) as producto, SUM(d.cantidad) as total_vendido from detalle d
+join producto p on d.id_producto = p.id_producto group by CAST(p.nombre as nvarchar(100)) order by SUM(d.cantidad) desc;
+
+/****** ¿Qué producto tiene más cantidad en stock? ******/
+
+select top 1 nombre as producto, stock from producto order by stock desc;
+
+/****** Ordenar por fecha las compras que ha habido en la tienda ******/
+
+select id_factura, fecha from factura order by fecha asc;
+
+/****** Ordenar alfabéticamente los nombres de los clientes de la tienda ******/
+
+select CAST(nombre as nvarchar(100)) as nombre_cliente from cliente order by nombre_cliente asc;
+
+/****** Seleccionar cuántos productos hay en cada categoría: falda, pantalón, chamarra, zapatos y accesorios ******/
+
+select top 50 nombre as producto, id_categoria from producto;
+
+/****** ¿Cuáles son los encargados en cada sucursal de Akira's Boutique? ******/
+
+select Numero_de_sucursal, Nombre_del_encargado from Sucursales
+
+/****** ¿Cuáles son los empleados que trabajan en la sucursal de Akira's Boutique sucursal Constitución? ******/
+
+select e.Nombre, e.Apellidos from Empleados e
+join Sucursales s on e.Nombre_de_la_sucursal = s.Nombre_de_la_sucursal where s.Nombre_de_la_sucursal = N'Akira’s Boutique: Constitución'
+
+/****** ¿Qué clientes son mayores de 30 años? ******/
+
+select id_cliente, CAST(nombre as nvarchar(100)) + ' ' +CAST(apellido as nvarchar(100)) as Nombre_Completo, fec_nac, DATEDIFF(year, fec_nac, getdate()) as edad
+from cliente where DATEDIFF(year, fec_nac, getdate()) > 30;
