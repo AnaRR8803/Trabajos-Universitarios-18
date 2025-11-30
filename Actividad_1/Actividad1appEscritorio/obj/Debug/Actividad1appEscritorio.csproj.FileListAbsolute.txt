@@ -1,0 +1,11 @@
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\bin\Debug\Actividad1appEscritorio.exe.config
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\bin\Debug\Actividad1appEscritorio.exe
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\bin\Debug\Actividad1appEscritorio.pdb
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\obj\Debug\Actividad1appEscritorio.csproj.AssemblyReference.cache
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\obj\Debug\Actividad1appEscritorio.Form1.resources
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\obj\Debug\Actividad1appEscritorio.Properties.Resources.resources
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\obj\Debug\Actividad1appEscritorio.csproj.GenerateResource.cache
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\obj\Debug\Actividad1appEscritorio.csproj.CoreCompileInputs.cache
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\obj\Debug\Actividad1appEscritorio.exe
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\obj\Debug\Actividad1appEscritorio.pdb
+C:\Users\rrlaa\source\repos\Actividad1appEscritorio\Actividad1appEscritorio\obj\Debug\Actividad1appEscritorio.exe.config

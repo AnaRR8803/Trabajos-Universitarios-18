@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System;
+namespace Actividad_1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //declarar variables
+            string Nombrecompleto;
+            string Edad;
+            string FechaNacimiento;
+            string Carrera;
+            string cierre;
+
+            Console.WriteLine("Bienvenido a UMI/Universidad Coppel");
+            Console.WriteLine("\nIngresa los datos que se te pide: ");
+            Console.WriteLine("\nNombre Completo: ");
+            Nombrecompleto = Console.ReadLine();
+            Console.WriteLine("\nEdad: ");
+            Edad = Console.ReadLine();
+            Console.WriteLine("\nFecha de nacimiento (DD/MM/AAAA/): ");
+            FechaNacimiento = Console.ReadLine();
+            Console.WriteLine("\nCarrera a la que desea ingresar: ");
+            Carrera = Console.ReadLine();
+
+            Console.WriteLine("\n\nGracias " + Nombrecompleto + " por formar parte de UMI/Universidad Coppel. \nBienvenido a la carrera de " + Carrera + ".");
+            Console.WriteLine("\nNombre Completo: " + Nombrecompleto);
+            Console.WriteLine("\nEdad: " + Edad);
+            Console.WriteLine("\nFecha de Nacimiento: " + FechaNacimiento);
+            Console.WriteLine("\ncarrera asignada: " + Carrera);
+            Console.WriteLine("\n\n\n\n\n");
+            Console.ReadLine();
+        }
+    }
+}
