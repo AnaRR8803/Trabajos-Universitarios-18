@@ -1,0 +1,16 @@
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\bin\Debug\Actividad2AppEscritorio.exe.config
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\bin\Debug\Actividad2AppEscritorio.exe
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\bin\Debug\Actividad2AppEscritorio.pdb
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.csproj.AssemblyReference.cache
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.Properties.Resources.resources
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.csproj.GenerateResource.cache
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.csproj.CoreCompileInputs.cache
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.exe
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.pdb
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.exe.config
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.Formularios.FMROpcion1.resources
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.Formularios.FMROpcion2A.resources
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.frmMenuP.resources
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.Formularios.FMROpcion2B.resources
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.Formularios.FMROpcion3.resources
+C:\Users\rrlaa\OneDrive\Documentos\Actividad2AppEscritorio\Actividad2AppEscritorio\obj\Debug\Actividad2AppEscritorio.FRMIngreso.resources
